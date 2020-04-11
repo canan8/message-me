@@ -1,14 +1,23 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>MessageMe</title>
-    <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+<head>
+  <title>MessageMe</title>
+  <%= csrf_meta_tags %>
 
-  <body>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+
+<body>
+  <div class="ui small inverted menu">
+    <div class="ui container">
+      <%= render 'layouts/navigation'%>
+    </div>
+  </div>
+  <div class="ui container">
     <%= yield %>
-  </body>
+  </div>
+</body>
+
 </html>
